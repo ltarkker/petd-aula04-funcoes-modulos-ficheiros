@@ -1,0 +1,157 @@
+1. GERADOR DE PASSWORDS
+
+INÍCIO
+  v
+Receber parâmetros:
+  - comprimento
+  - flag maiúsculas
+  - flag números
+  - flag especiais
+  v
+pool = minúsculas
+  v
+maiúsculas?
+  sim -> pool += maiúsculas
+  não -> segue
+  v
+números?
+  sim -> pool += dígitos
+  não -> segue
+  v
+especiais?
+  sim -> pool += símbolos
+  não -> segue
+  v
+Repetir N vezes:
+  escolher caracter aleatório do pool
+  v
+Juntar tudo numa string
+  v
+Retornar password
+  v
+FIM
+
+
+2. CALCULADORA DE ESTATÍSTICAS
+
+INÍCIO
+  v
+Receber lista
+  v
+lista vazia?
+  sim -> retornar None (FIM)
+  não -> segue
+  v
+Ordenar lista
+  v
+média = soma / n
+  v
+n é par?
+  sim -> mediana = média dos 2 valores centrais
+  não -> mediana = valor central
+  v
+mínimo = min(lista)
+máximo = max(lista)
+  v
+Retornar dicionário:
+  - média
+  - mediana
+  - mínimo
+  - máximo
+  v
+FIM
+
+
+3. PROCESSAMENTO DE TEXTO
+
+INÍCIO
+  v
+Receber texto
+  v
+texto vazio?
+  sim -> retornar {} (FIM)
+  não -> segue
+  v
+linhas = texto.split('\n')
+  v
+palavras = texto.split()
+  v
+caracteres = soma do len de cada palavra
+  v
+palavra_maior = max(palavras, key=len)
+  v
+Retornar dicionário:
+  - num_linhas
+  - num_palavras
+  - num_caracteres
+  - palavra_mais_longa
+  v
+FIM
+
+
+4. CONTAGEM DE LINHAS EM FICHEIRO
+
+INÍCIO
+  v
+Receber caminho
+  v
+Abrir ficheiro (with open)
+  v
+linhas = readlines()
+  v
+total = len(linhas)
+  v
+Para cada linha:
+  - se strip() == ''    -> branco++
+  - se começa com '#'   -> comentario++
+  v
+codigo = total - branco - comentario
+  v
+Retornar dicionário:
+  - total
+  - codigo
+  - comentario
+  v
+FIM
+
+
+5. ANÁLISE DE CSV
+
+INÍCIO
+  v
+Receber caminho e separador (sep=',')
+  v
+Abrir ficheiro (with open)
+  v
+linhas = readlines()
+  v
+cabeçalhos = primeira linha dividida pelo separador
+  v
+dados = restantes linhas divididas pelo separador
+  v
+Imprimir sumário (ficheiro, nº registos, campos)
+  v
+Retornar dicionário:
+  - cabecalhos
+  - num_registos
+  - dados
+  v
+FIM
+
+
+SÍMBOLOS
+
+  v       seta de fluxo (para baixo)
+  ->      consequência ou ramo da decisão
+  ?       pergunta / decisão
+
+
+PADRÕES QUE SE REPETEM
+
+  1. Validar input no início (early return)
+  2. Abrir ficheiros sempre com 'with'
+  3. Quando se retornam vários valores, usar dicionário
+  4. Percorrer colecções com comprehensions
+  5. Aproveitar built-ins (sum, min, max, len, sorted)
+
+
